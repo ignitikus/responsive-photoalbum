@@ -1,5 +1,6 @@
 *{
     margin: 0;
+    font-family: 'Press Start 2P', cursive;
 }
 
 #main-container{
@@ -7,6 +8,7 @@
 }
 
 #header{
+    text-align: center;
     background-color: aqua;
 }
 
@@ -14,6 +16,23 @@
     background-color: blueviolet;
 }
 
+#gallery{
+    background-color: coral;
+}
+
 #footer{
     background-color: cadetblue;
 }
+
+/* #app {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-rows: repeat(6, 200px);
+    grid-gap: 1rem;
+  }
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  } */
