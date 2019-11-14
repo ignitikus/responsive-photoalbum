@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+}
+
+#main-container{
+    display: grid;
+}
+
+#header{
+    background-color: aqua;
+}
+
+#navigation{
+    background-color: blueviolet;
+}
+
+#footer{
+    background-color: cadetblue;
+}
