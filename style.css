@@ -13,6 +13,7 @@
     "nav gallery"
     "nav footer"
     ;
+    background-color: rgb(10, 10, 10);
 }
 
 #navigation-button{
@@ -50,9 +51,6 @@
     display: block;
     transition: 0.3s;
 }
-/* #navigation a:hover {
-    color: #f1f1f1;
-} */
 
 #navigation .closebtn {
     position: absolute;
@@ -65,8 +63,14 @@
 #header{
     text-align: center;
     grid-area: header;
-    background-color: aqua;
+    padding-top: 4vh;
+    font-size: 6rem;
+    color: ivory;
+    text-shadow: 6px 10px gray;
+
+    /* background-color: aqua; */
 }
+
 
 
 #gallery{
@@ -76,8 +80,34 @@
 
 #footer{
     grid-area: footer;
+    display: grid;
+    grid-template-areas: 
+        "question link"
+        "contact copyright"
+    ;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     background-color: cadetblue;
 }
+
+#question{
+    grid-area: question;
+}
+
+#contact{
+    grid-area: contact;
+}
+
+#github{
+    grid-area: link;
+}
+
+#copyright{
+    grid-area: copyright;
+}
+
+
+
 
 /* #app {
     display: grid;
