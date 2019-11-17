@@ -1,7 +1,9 @@
 *{
     margin: 0;
     font-family: 'Press Start 2P', cursive;
+    cursor: url("./pictures/Pizza\ Normal\ Select.cur"), default;
 }
+
 
 #main-container{
     display: grid;
