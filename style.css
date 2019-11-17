@@ -15,6 +15,12 @@ img:hover {
     transform: scale(1.3);
 }
 
+p{
+    color: grey;
+    text-shadow: none;
+    font-size: 1rem;
+}
+
 #main-container{
     display: grid;
     height: 100%;
@@ -22,6 +28,8 @@ img:hover {
     grid-template-rows: 20% 75% 5%;
     grid-template-areas: 
     "nav header"
+    "gallery gallery"
+    "gallery gallery"
     "gallery gallery"
     "footer footer"
     ;
@@ -31,7 +39,7 @@ img:hover {
 #navigation-button{
     height: 100%;
     text-align: center;
-    padding-top: 7rem;
+    padding-top: 4rem;
     font-size:30px;
     cursor:pointer;
     color: ivory;
@@ -73,13 +81,25 @@ img:hover {
     margin-left: 50px;
 }
 
+#click-me:hover{
+    color: black;
+    background-color: ivory;
+}
+
+#signature{
+    display: block;
+    padding-top: 5%;
+    padding-right: 5%;
+    text-align: right;
+}
+
 #header{
     text-align: center;
     grid-area: header;
-    font-size: 7rem;
+    font-size: 6rem;
     color: ivory;
     text-shadow: 6px 10px gray;
-    line-height: 17rem;
+    line-height: 10rem;
 }
 
 #gallery{
@@ -90,7 +110,7 @@ img:hover {
 #picture-container{
     display: grid;
     height: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     grid-template-rows: repeat(3, 350px);
     grid-gap: 1rem;
     grid-template-areas: 
@@ -202,6 +222,10 @@ img:hover {
 }
 
 @media(max-width: 500px){
+    p{
+    font-size: 0.8rem;
+    }
+
     img:hover {
         transform: scale(1);
     }
@@ -377,3 +401,4 @@ img:hover {
         text-align: center;
         font-size: 1.5rem;
     }
+}

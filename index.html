@@ -9,11 +9,32 @@
     </head>
     <body>
         <div id="main-container">
-            <div id ="header"><p>8-bit nostalgia</p></div>
-            <div id="navigation-button"><a  onclick="openNav()">Click Me!</a></div>
+            <div id ="header">8-bit nostalgia</div>
+            <div id="navigation-button"><a  onclick="openNav()"><span id="click-me">Click Me!</span></a></div>
             <div id="navigation">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="#">ReadMe</a>
+                <a href="#">ReadMe<br>
+                    <br>
+                    <p>Welcome to my website! <br>
+                    My goal was to create a website gallery that would look great on different devices.<br>
+                    <br>
+                    There are 4 supported resolutions: <br>
+                    1) Mobile (under 500px); <br>
+                    2) Medium Tablet (from 501px to 800px); <br>
+                    3) Large Tablet (from 801px to 1100px); <br>
+                    4) Default (from 1101px)<br>
+                    <br>
+                    There are 3 grids in total. 1 for main layout, 1 for gallery, and 1 for footer.<br>
+                    <br>
+                    Challenges: <br>
+                    <br>
+                    Had issue with the footer. It appeared in the middle of the gallery. Solved by adding in 'grid-template-areas' more lines for gallery. <br>
+                    <br>
+                    There is difference in resolution between IPad and IPad Pro. Solved by adding separate @media. <br>
+                    <br>
+                    <span id="signature">- Niko</span>
+                    </p>
+                </a>
             </div>
             <div id="gallery">
                 <div id="picture-container">
@@ -38,7 +59,7 @@
                 <div id="question">Like what you see?</div>
                 <div id="contact">Contact info - <a href = "mailto: nikolay.kim@codeimmersives.com" id="mail-link">Gmail</a></div>
                 <div id="github"><a href="https://github.com/ignitikus/responsive-photoalbum" alt="link to github repo" id="github-link">GitHub - link to repo</a> </div>
-                <div id="copyright">Copyright © 2019 Niko. No Rights Reserved</div>
+                <div id="copyright">Copyright © 2019 Niko. <br> No Rights Reserved</div>
             </div>
         </div>
         <script src="./main.js"></script>
