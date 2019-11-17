@@ -7,7 +7,7 @@
     display: grid;
     height: 100vh;
     grid-template-columns: 15% 85%;
-    grid-template-rows: 20% 60% 20%;
+    grid-template-rows: 20% 75% 5%;
     grid-template-areas: 
     "nav header"
     "nav gallery"
@@ -63,12 +63,10 @@
 #header{
     text-align: center;
     grid-area: header;
-    padding-top: 4vh;
-    font-size: 6rem;
+    font-size: 7rem;
     color: ivory;
     text-shadow: 6px 10px gray;
-
-    /* background-color: aqua; */
+    align-self: center;
 }
 
 
@@ -87,7 +85,8 @@
     ;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    background-color: cadetblue;
+    background-color: ivory;
+    align-items: center;
 }
 
 #question{
@@ -98,9 +97,20 @@
     grid-area: contact;
 }
 
+#mail-link, #github-link{
+    text-decoration: none;
+    color: black;
+}
+
+#mail-link:hover, #github-link:hover{
+    color: ivory;
+    background-color: black;
+}
+
 #github{
     grid-area: link;
 }
+
 
 #copyright{
     grid-area: copyright;
