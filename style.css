@@ -8,7 +8,12 @@
 img {
     width: 100%;
     height: 100%;
-    object-fit: cover;}
+    object-fit: cover;
+}
+
+img:hover {
+    transform: scale(1.3);
+}
 
 #main-container{
     display: grid;
@@ -197,7 +202,10 @@ img {
 }
 
 @media(max-width: 500px){
-    
+    img:hover {
+        transform: scale(1);
+    }
+
     #main-container{
         grid-template-columns: 100%;
         grid-template-rows: 1fr 2fr 16fr 4fr;
