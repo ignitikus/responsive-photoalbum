@@ -1,5 +1,6 @@
 *{
     margin: 0;
+    height: 100%;
     font-family: 'Press Start 2P', cursive;
     cursor: url("./pictures/Pizza\ Normal\ Select.cur"), default;
 }
@@ -11,7 +12,7 @@ img {
 
 #main-container{
     display: grid;
-    height: 100vh;
+    height: 100%;
     grid-template-columns: 15% 85%;
     grid-template-rows: 20% 75% 5%;
     grid-template-areas: 
@@ -25,7 +26,7 @@ img {
 #navigation-button{
     height: 100%;
     text-align: center;
-    padding-top: 8rem;
+    padding-top: 7rem;
     font-size:30px;
     cursor:pointer;
     color: ivory;
@@ -73,55 +74,12 @@ img {
     font-size: 7rem;
     color: ivory;
     text-shadow: 6px 10px gray;
-    align-self: center;
+    line-height: 17rem;
 }
-
-
 
 #gallery{
     grid-area: gallery;
     background-color: coral;
-}
-
-#footer{
-    padding-left: 1%;
-    grid-area: footer;
-    display: grid;
-    grid-template-areas: 
-        "question link"
-        "contact copyright"
-    ;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    background-color: ivory;
-    align-items: center;
-}
-
-#question{
-    grid-area: question;
-}
-
-#contact{
-    grid-area: contact;
-}
-
-#mail-link, #github-link{
-    text-decoration: none;
-    color: black;
-}
-
-#mail-link:hover, #github-link:hover{
-    color: ivory;
-    background-color: black;
-}
-
-#github{
-    grid-area: link;
-}
-
-
-#copyright{
-    grid-area: copyright;
 }
 
 #picture-container{
@@ -195,4 +153,104 @@ img {
 
 #picture15{
     grid-area: pic15;
+}
+
+#footer{
+    grid-area: footer;
+    display: grid;
+    width: 100%;
+    grid-template-areas: 
+        "question link"
+        "contact copyright"
+    ;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    background-color: ivory;
+    align-items: center;
+    font-size: 2rem;
+}
+
+#question{
+    grid-area: question;
+}
+
+#contact{
+    grid-area: contact;
+}
+
+#mail-link, #github-link{
+    text-decoration: none;
+    color: black;
+}
+
+#mail-link:hover, #github-link:hover{
+    color: ivory;
+    background-color: black;
+}
+
+#github{
+    grid-area: link;
+}
+
+#copyright{
+    grid-area: copyright;
+}
+
+@media(max-width: 500px){
+    
+    #main-container{
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 2fr 16fr 4fr;
+        grid-template-areas: 
+        "nav" 
+        "header"
+        "gallery"
+        "footer"
+        ;
+    }
+
+    #navigation-button{
+        height: 50%;
+        padding-top: 10px;
+    }
+    #header{
+        padding-top: 1rem;
+        line-height: inherit;
+        font-size: 2.5em;
+    }
+    
+    #picture-container{
+        display: grid;
+        height: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-rows: auto;
+        grid-gap: 0.5rem;
+        grid-template-areas: 
+            "pic01 pic02"
+            "pic03 pic04"
+            "pic05 pic06" 
+            "pic07 pic08" 
+            "pic09 pic10"
+            "pic11 pic12" 
+            "pic13 pic14" 
+            "pic15 pic15"
+        ;
+    }
+
+    #footer{
+        display: grid;
+        grid-template-areas: 
+            "question"
+            "link"
+            "contact" 
+            "copyright"
+        ;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    #question, #contact, #mail-link, #github-link, #github, #copyright{
+        text-align: center;
+        font-size: 1.1rem;
+    }
 }
